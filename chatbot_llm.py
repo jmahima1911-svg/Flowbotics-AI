@@ -10,7 +10,6 @@ from Vector_dataset import VectorDBStore
 from datetime import datetime
 from RLFH_feedback import AutomatedRLHFSystem
 import logging
-import os
 
 # ============================================
 # CONFIGURATION - SET YOUR API KEY HERE
@@ -77,8 +76,7 @@ class FlowboticsChatbotOptimized:
         self.conversation_history = []
         
         # System prompt (optimized)
-        self.system_prompt = 
-        """You are a friendly AI assistant for Flowbotics, an AI automation agency. Talk like a real person having a conversation - no jargon, no corporate speak.
+        self.system_prompt = """You are a friendly AI assistant for Flowbotics, an AI automation agency. Talk like a real person having a conversation - no jargon, no corporate speak.
 
 Communication Style:
 - Keep it casual and natural - like texting a knowledgeable friend
@@ -107,7 +105,9 @@ Response Rules:
 - No phrases like "based on the context" or "according to information"
 - Just answer naturally, like you already know this stuff
 
-Think: helpful neighbor, not corporate robot."""                                   
+Think: helpful neighbor, not corporate robot."""
+
+        
         logger.info(f"✓ Optimized Chatbot initialized with Groq API")
         logger.info(f"✓ Model: {model_name}")
         logger.info(f"✓ VectorDB loaded: {self.vectordb.get_stats()} chunks")
@@ -409,4 +409,3 @@ if __name__ == "__main__":
         interactive_chat()
     except Exception as e:
         print(f"Error: {e}")
-
