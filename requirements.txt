@@ -1,0 +1,10 @@
+groq
+chromadb
+langchain
+streamlit
+torch
+numpy
+transformers
+trl
+datasets
+langchain-text-splitters
