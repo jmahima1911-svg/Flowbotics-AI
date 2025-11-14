@@ -3,7 +3,7 @@ Document Chunking Script for Gen AI Chatbot
 Uses LangChain (free, open-source) for intelligent text splitting
 """
 
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_text_splitters  import RecursiveCharacterTextSplitter
 import os
 
 def chunk_markdown_files(directory_path, chunk_size=1000, chunk_overlap=200):
@@ -116,4 +116,5 @@ if __name__ == "__main__":
         print(f"Source: {chunks[0]['source']}")
         print(f"Chunk: {chunks[0]['chunk_id']+1}/{chunks[0]['total_chunks']}")
         print("-"*80)
+
         print(chunks[0]['content'][:500] + "...")
