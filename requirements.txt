@@ -7,4 +7,5 @@ numpy
 transformers
 trl
 datasets
+sentence_transformers
 langchain-text-splitters
